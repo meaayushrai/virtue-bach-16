@@ -1,0 +1,17 @@
+package com.virtue.ui;
+
+import java.util.Arrays;
+
+public class ArraysClassDemo {
+
+	public static void main(String[] args) {
+		int[] arr = {10,20,30,40};
+		//System.out.println(Arrays.toString(arr));
+		int[] arr2 = {10,20,30,40};
+		
+		System.out.println(arr == arr2);
+		System.out.println(arr.equals(arr2));
+
+	}
+
+}

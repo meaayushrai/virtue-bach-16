@@ -1,0 +1,3227 @@
+============================================================================================================
+D.Srinivas | dachepallisrinivas@gmail.com | 630 573 0633 (call/whatsapp)
+============================================================================================================
+
+
+Softwares Required:
+-------------------
++	JDK 1.8
+	https://www.oracle.com/in/java/technologies/javase/javase8u211-later-archive-downloads.html
+
++	Eclipse Enterprise Edition for Java EE Developers
+	https://www.eclipse.org/downloads/packages/release/neon/3/eclipse-ide-java-ee-developers
+
++	Oracle 11g express edition
+	https://www.oracle.com/database/technologies/xe-prior-release-downloads.html
+
++	SQL Developer tool
+	https://www.oracle.com/tools/downloads/sqldev-downloads.html
+	download windows 32-bit/64-bit
+
++	Apache Tomcat 9
+	https://tomcat.apache.org/download-90.cgi
+
++	Spring Tool Suite 4
+	https://spring.io/tools
+
+
+
+[1] 19-Jan-2022
+
+What is Java?
++	It is strictly, but partially object oriented programming language.
+	(because java primitive datatypes are not objects)
+
+
+Who developed Java?
++	James Gosling at sun micro Sytems.
+	Java is now monitored by Oracle Corp.
+
+Features of Java:
++	platform independent
++	secured
++	robust
++	object oriented
+
+
++	architecture neutral
++	multithreaded
++	high performance
++	dynamic
++	compiled-and-interpreted
++	portable
++	distributed
+
+
+platform independent:
++	in this context, platform means operating systems.
+
+source code	►	sample.java
+compiler	►	sample.class	(byte code)
+byte code 	►	JVM	►	native machine code	►	O/S
+
+
+byte code can be given to any O/S.
+
+
+JDK	(Java Development Kit)
+JRE	(Java Runtime Environment)
+JVM	(Java Virtual Machine)
+
+
+is JDK platform independent?		
++	NO
+is JRE platform independent?
++	NO 
+is JVM platform independent?
++	NO
+
+Which is platform independent in Java?
++	ONLY BYTECODE is platform independent.
+
+
+
+What is the difference between JDK, JRE and JVM?
+
+	JDK = JRE + Development Tools (javac, java, javaw, javap, javadoc, jdb, javah, jar, appletviewer,  etc.,)
+	JRE = JVM + libraries
+
+
+
+
+How can we say java is secured?
++	no explicit pointers in java
++	java programs run inside jvm (not in the o/s directly unlike 'C',C++)
+
+
+sample.c	►	sample.obj / sample.o	►	sample.exe	(exe is the only format understood by windows o/s)
+
+
+How can we can say java is robust?
++	robust means strong, vigiour and healthy.
+
++	strong type checking mechanism.
++	exception handling
++	automatic memory management
+
+
+
+CODING STANDARDS
++	proper naming conventions
++	proper indentation
+
+
+
+								Java Tokens
+								-----------
+
++	smallest part of the program is called as Token.
+	a) identifiers
+	b) operators
+	c) keywords
+	d) literals
+	e) comments	
+
+						
+1)	identifiers
+	-	name given to variables, classes, methods etc.,
+
+	a)	Pascal Notation		:	first letter of every word in upper case and the rest in lower case
+						eg: class names, interface names etc.,
+
+						eg: ArrayIndexOutOfBoundsException, ArrayList, TreeMap etc.,
+
+	b)	Camel Notation		:	first word is in lowercase, from the second word onwards Pascal Notation
+						eg: variable names, method names etc.,
+
+						eg: firstNumber, indexOf(), lastIndexOf() etc.,
+			
+	c)	Uppercase Notation	:	constants
+
+	d)	Lowercase Notation	:	package names
+						eg: java.io, java.awt, java.util, java.lang etc.,
+
+
+2) operators
+	-	arithmetic	:	+	-	*	/	%
+	-	relational	:	>	<	==	>=	<=	!=
+	-	logical		:	&&	||	!
+	-	assignment	:	=	+=	-=	*=	/=	%=
+	-	bit-wise 	:	&	|	~	>>	<<	^
+	-	conditional operator :	(condition) ? true-statement : false-statement
+	-	increment/decrement :	++	--
+	-	special operators :
+		;	[]	
+		+	string concatenation
+		"instance of"	operator
+
+
+3) keywords (reserved words)
+	-	if, switch, for, int, float, long
+
+
+4) literals
+	-	any fixed value that does not change during the program execution.
+
+	numeric literals
+	-	integer literals
+		-	decimal		-	base 10		-	0 - 9		-	no prefix	
+		-	binary		-	base 2		-	0,1		-	0b prefix
+		-	octal		-	base 8		-	0-7		-	0  prefix
+		-	hexa-decimal	-	base 16		-	0-9,A-F		-	0x prefix
+
+
+		int a = 101;
+		int c = 0101;
+		int b = 0b101;
+		int d = 0x123ABCF;
+
+
+	-	floating-point literals
+		-	2.56
+	
+	non-numeric literals
+	-	character literals
+		-	single alphabet, single digit, single special symbol enclosed within single quotes
+			eg:	'A'	'7'	'?'
+	-	string literals
+		-	group of characters enclosed within double quotes.
+			eg:	"srinivas"	"49-53-20/25"	"9247175823"	"A"	"" (empty string literal)
+	-	boolean literals
+			true, false
+
+
+5) comments
+	a)	//   				end-of-line comment
+	b)	/* 	..	*/		block comment
+	c)	/** 	..	*/		documentation comment
+
+
+
+	a) identifiers
+	b) operators
+	c) keywords
+	d) literals
+	e) comments	
+
+
+what are the tokens in the following statement?
+
+	double 		area 		= 		PI		*		radius		*		radius		;
+		
+	keyword		identifier	operator	constant	operator	identifier	operator	identifier	operator
+
+
+
+what is the difference between a literal and constant?
+
+	it is also known as symbollic constant.
+	it is a name given to literal.
+	whose value can never be changed in the program execution.
+	constants can be defined using "final" keyword.
+
+
+	double PI = 3.14;		// declaring a variable whose name is PI.
+	final double PI = 3.14;		// declaring a constant whose name is PI
+
+	final int MAX_MARKS = 100;
+	final int PASS_MARKS = 35;
+
+	PI, MAX_MARKS, PASS_MARKS are called constants
+	3.14, 100, 35 are called literal.
+
+
+what are the various data types?
+
++	primitive
+		byte, short, int, long
+		float, double
+		char, boolean
+
++	non-primitive (user-defined)
+		class, interface, enum, annotation
+
+
+
+package:
+	it is a collection of related classes, interfaces and sub packages.
+	internally it is represented as a folder in O/S.
+
+
+	reverse of the domain name.	
+
+	www.virtue.com	→	com.virtue
+
+	www.dxc.in	→	in.dxc
+	
+
+
+System.out.println("Hello world");
+	
+	System		►	class available in java.lang package
+	out		►	a static object of java.io.PrintStream class
+	println()	►	a method in java.io.PrintStream class
+
+
+String[] args?
+	called as command-line arguments.
+	this is another way of taking inputs.
+
+
+print all the command line arguments.
+
+print the sum of two numbers passed as command line arguments.
+
+
+
+
+Wrapper classes		(java.lang)
+------------------------------------
+
+
+	wrapper class			static method
+	--------------------------------------------------------------------
+	Integer				parseInt(string-form-int)
+	Double				parseDouble(string-form-double)
+
+
+
+	int a = Integer.parseInt("123");
+	System.out.println(a);			//	123
+
+
+	double b = Double.parseDouble("25.789");
+	System.out.println(b);			//	25.789
+
+
+
+Can we have two main methods in a java program?
+(or)
+Can main method be overloaded?
+
+	YES.
+	
+
+method overloading:
++	if two or more methods in a class having the same name but with different parameter list, then it is said to be 
+	overloading.
+
+
+
+
+						control structures	
+						(control statements)
+					--------------------------------------------
+
++	if, switch				(decision making)
++	for, while, do..while, enhanced for	(looping)
++	break, continue				(jump)
++	labelled break, labelled continue
+
+
+what is the difference between if and switch?
++	"if" is a bi-directional decision making statement.
+	> , <, ==, >=, <= , !=
+	int, long, float, double, byte, short, char, boolean
+
++	"switch" is a multi-directional decision making statement.
+	only ==	(equality) comparisions
+	illegal data types	:	float, double, boolean
+	legal data types	:	char, byte, short, int, enum, String
+
+
+for, while, do..while	-	statements are executed as long as the condition is true.
+
+
+how to choose between for and while?
+	for loop is used to iterate set of statements for a finite number of times.
+	where as while loop is used to iterate set of statements for an indefinite number of times. 
+
+
+	factorial program	►	for
+	reversing a number	►	while
+
+
+what is do..while loop?
++	to execute a loop at least once irrespective of the condition.
+
+
+what is the result of a condition?
++	true or false
+
+
+what is the difference between break and continue?
++	whenever a break statement is encountered within any loop, the control immediately comes out of the loop 
+	without executing remaining iterations.
+
+
+
+1) accept a number. reverse it. print it.
+	eg: input : 749
+	ouput : 947
+
+2) accept a number. print the sum of the digits it.
+	eg: input : 749
+	output : 20	(=9+4+7)
+
+3) accept a number. print whether it is prime number or not.
+
+4) accept a number. print whether it is palindrome or not.
+	eg: input : 121
+	    output : palindrome
+
+5) accept a number. print whether it is armstrong or not.
+
+	eg: input : 153
+	output : 3^3 + 5^3 + 1^3 = 153	
+
+6) fibonacci series
+
+
+Array
++	It is a linear collection of homogeneous data items stored under single name.
++	It is a static data structure means we cannot change the size of the array.
++	In java, array is an object.
++	Every array has a special field, "length" that return number of elements in that array.
+
+types of array:
++	single dimension
++	multi dimension
++	jagged array
+
+
+java.util.Scanner:
++	used to accept the data into variables during runtime
+
++	nextInt()
++	nextDouble()
++	nextLine()
++	next()
+
+
+enhanced for loop:
++	syntax:
+		for(datatype  var : array/collection) {
+			statement(s);
+		}
+
+what is the difference between for and enhanced for loop:
++	the loop variable in for loop is always int.
+	the loop variable in enhanced for loop is always same as the array type.
++	enhanced for loop can be used only in forward direction (start element to stop element).
+
+
+initializing an array:
++	int[] arr = { 10, 20, 30 };
+
+
+note:
++	every row in a double dimensional array is treated as a single dimension array internally by java.
+
+
+
+1	2	3
+4	5	6
+7	8	9
+
+
+Jagged Array:
++	each row contain different number of columns.
+
+
+eg:
+
+	jarr
+
+1	2	3			==>	jarr[0]
+4	5				==>	jarr[1]
+6					==>	jarr[2]
+7	8	9	10		==>	jarr[3]
+
+
+
+
+java.util.Arrays:
+
++	this class offer many utility methods that can work on arrays.
+
++	toString(array)
++	equals(array-1, array-2)
++	sort(array)
++	binarySearch(array-1, key)
+	+	the array must be in sorted order to perform binarySearch operation.
+
+
++	deepToString(darray)
++	deepEquals(darray-1, darray-2)
+
+
+
+functions (methods):
+
++	It is a sub program designed to perform a specific task that can be used repeatedly.
+
+
++	function definition
+		returnType   functionName(datatype  arg-1, datatype  arg-2, ...) {
+			statment(s);
+		}
+
++	function call
+		[var = ] functionName(arg-1, arg-2, ...);
+
+
+actual parameters	:	parameters specified in the function call statement
+formal parameters	:	parameters specified in the function definition
+
+
+function to return the sum of the digits.
+
+
+function overloading (method overloading):
++	if two or more functions (methods) having the same name but with different parameter list then it is said to be overloading.
+ 
+
+
+Can I pass array as an argument to function?
++	YES
+
+Can I return an array from a function?
++	YES
+
+
+return minimum and maximum in an array using functions.
+
+
+							varargs
+						(variable arguments)
+
+"..." (three dots) symbol is known as "ellipsis".
+it represent the function can take any number of values that are comma-seperated.
+
+
+Note:
++	the varargs parameter must be the last formal parameter in the function definition.
+
+
+
+								String class
+								-------------
+							     (java.lang package)
+
+java.lang 	►	default package
+			means it is imported automatically for every program.
+
+			eg: String, System, Integer, Float, Double, Long, Boolean etc.,
+
+java.lang.String:
+-------------------
++	it is a pre-defined class
++	it is immutable (not modifiable)
+
+
+declaring String object:
+------------------------
+1) String str;
+2) String str = "java";
+	         0123
+3) String str = new String();
+4) String str = new String("hello");
+
+methods:
+--------
+a) length()
+b) charAt(index)
+	str.charAt(0)		→	j
+c) indexOf(String)
+	str.indexOf("a");	→	1	(first occurance)
+d) lastIndexOf(String)
+	str.lastIndexOf("a")	→	3	(last occurance)
+e) substring(start_index_inclusive  [, end_index_exclusive])
+	str.substring(2,4)	→	va
+	str.substring(2)		→	va
+f) startsWith()	→	str.startsWith("ja")	→	true
+g) endsWith()	→	str.endsWith("va")	→	true
+h) contains()	→	str.contains("a")	→	true
+i) toUpperCase()	
+j) toLowerCase()
+k) concat()	→	to combine two string
+l) replace(old_char, new_char)
+m) trim()	→	remove both leading and trailing spaces.
+n) equals()	→	compare two strings considering case
+o) equalsIgnoreCase()
+p) compareTo()	→	to compare two strings	→	return 0 if both are equal, +ve value if string1 is big, -ve value if string2 is big
+q) isEmpty()
+r) toCharArray()
+s) split(regex)
+
+What is the difference between == and equals() ?
+
+what is the difference between equals() and compareTo() ?
+
+
+
+
+
+							OOPS
+					(Object Oriented Programming System)
+
++	It is a programming paradigm.
+	+	monolithic programming
+	+	procedural programming
+	+	structured programming
+	+	object oriented programming
+		-	programs are written that simulate real world objects.
+
+
+class	:	It is a user defined datatype that represent an entity in terms of properties and behaviour.
+		It is a reusable software component.
+		properties are also known as "data members" or "fields".
+		behaviours are represented as "methods" (method is a funcrtion that defined inside a class)
+		No memory is allocated when we define a class.
+
+		classes are created for different purposes.
+		classes are also known as "model" or "pojo"	(POJO stands for Plain Old Java Object)
+
+object	:	It is a variable whose data type is class.
+		It is the runtime instance of a class.
+		memory is allocated only when an object is created.
+
+
+
+advantages of OOP:
++	code reusability
++	security
+
+
+features of OOP:
++	encapsulation		: 
++	data hiding		: keeping data safe 
++	abstraction		: behaviour hiding
+
+
+take any real world example and explain encapsulation, data hiding and abstraction?
+
+
++	inheritance
++	polymorphism
++	message passing
++	persistence
+
+
+
+
+
+access speciers (access modifiers):
++	private
+	+	members can be accessed only within the class in which they are defined
++	public
+	+	members can be accessed from any class.
++	default
+	+	members can be accessed from any class in the same package
++	protected
+	+	members can be accessed from sub classes also.
+
+
+setters (mutators) and getters (accessors):
++	setter is a public method of a class through which other programs can change the value of associated data member.
++	getter is a public method of a class through which other programs can retrieve the value of associated data member
+
+
+how do you implement data hiding?
++	making data members as private.
+
+how do you implement encapsulation?
++	providing setters and getters.
+
+data members are stored independently for each object.
+methods are stored only one in the memory and thay are accessed by all objects of the class.
+
+
+
+static:
++	static means "sharable"
+
+static can be used in 4 ways
++	static data member
+	-	these are also known as "common data members"
+	-	it is stored only once but can be accessed by all objects of the class.
+	-	it is used to common data across all objects.
+
++	static method
+	-	these are used to manage static data members,
+	-	it will not allow non-static members
+	-	static method can be called directy with the class name. we don't need to have any object to call it.
+
++	static block
+	-	block is a group of statements enclosed within curly braces.
+	-	it is the first code block that is executed in the program.
+	-	it is executed automatically 
+		-	whenever the class is accessed for the first time.
+			-	by creating an object of that class
+			-	whenever a static method is called
+			-	whenever a static data member is accessed
+
+	can we have multiple static blocks?
+	-	we can have multiple static blocks.
+
+
++	static class	
+	-	it can be used only on inner class
+
+
+Can I overload static methods?
++	YES
+
+class Test {
+	public static void show(int x) {
+		System.out.println(x);
+	}
+
+	public static void show(double x) {
+		System.out.println(x);	
+	}
+}
+
+class TestApp {
+	public static void main(String[] args) {
+		Test.show(100);
+		Test.show(5.6);
+	}
+}
+
+
+
+
+[4] 15-jan-2022
+
+
+java.lang.StringBuilder and java.lang.StringBuffer :
++	these are peer classes of java.lang.String
++	both are mutable (modifiable)
+
+methods:
+a) length()
+b) capacity()
+c) append()
+d) insert()
+e) replace()
+f) delete()
+g) reverse()
+
+what is the difference?
++	StringBuilder is NOT THREAD-SAFE where as StringBuffer is THREAD-SAFE.
+
+
+assignment:
++	palindrome program using String class.
+
+
+
+constructors:
++	It is a special method and is executed automatically whenever an object is created.
++	It should have the same name as that of class.
++	It can have parameters
++	But it cannot return any value, and should not have return type as "void".
++	A class can have many constructors. This is called "constructor overloading".
+
++	It is used to initialize data members.
+								
+
+types of constructors:
++	default constructor	(no-parameter constructor)
++	parameter constructor
++	copy constructor
+
+note:
++	when a class do not have any constructtors, java provide one default constructor.
++	but if the class has atleast one constructor, java do not provide any constructor.
+
+
+"this" reference:
++	"this" means implied object.
++	it holds the reference of current object that is invoking a constructor or method.
+
+
+inheritance:
++	creating a new class (sub class) from an existing class (super class)
++	sub class can use all the features of super class as well as any extra features that are added to it.
++	using "extends" keyword we can create a sub class.
++	it represent an "is-A" relationship
++	it is mainly for code reusability.
+
+
+types of inheritance:
+----------------------
++	simple (single)
++	hierarchical
++	multi-level
+
++	multiple inheritance is not supported in java. to acheive this, we have to use interfaces.
+
+
+
+super:
+------
++	super is also used to call super class constructor from sub class constructor.
+		super(arg-1, arg-2, ...)
+	if used, super() call must be the first statement in the code block.
+
++	super is used to access super class data members or super class methods from sub class.
+		super.dataMember
+		super.method(arg-1, arg-2, ...)
+
++	if super() is to be used, it must be the first statement in the code block.
++	this() and super() cannot be used at a time.	(mutually exclusive)
+
+
+
+
+
+	
+
+
+what is the difference between method overloading and method overriding?
+
+method overloading:
+--------------------
+when two methods have the same name but with different parameter list.
+
+method overriding:
+-------------------
+when a sub class contain a method that has same signature as that of another method in it's super class then the sub class method is said to be
+overriding.
+
+it is a best practice to use "@Override" annotation on overrided methods.
+it is optional.
+But if used, if the overriding is not done properly, compiler will give an error.
+
+
+method signature	=	 method name + parameter list
+
+
+class Test {
+	public int add(int a, int b) {
+		return a+b;
+	}
+	public int mul(int a, int b) {
+		return a-b;
+	}
+	
+}
+
+
+class subTest extends Test {
+	public int add(int a, int b) {		// overriding
+		return a+b+100;
+	}
+	public int mul(int a, int b, int c) {	// overloading
+		return a-b-c;
+	}
+}
+
+
+class TestApp {
+	public static void main(String[] args) {
+		Test obj = new Test();
+		System.out.println(obj.add(5,6));
+		SubTest obj2 = new SubTest();
+		System..out.println(obj2.add(6,7));
+
+	}
+}
+		
+
+java.lang.Object	class
+------------------------------
++	it is universal super class (cosmic class)
++	every class in java, whether it is pre-defined or user-defined, they are inherited from java.lang.Object class.
+
+methods:
+1) public String toString()
+2) public boolean equals(Object o)
+3) public int hashCode()
+4) public Object clone()
+5) protected void finalize() throws Throwable 
+
+
+					person(name, age)
+						↑
+						↑
+	Employee	(salary)	←----------------→	Student		(fee)
+	    ↑
+	Manager		(bonus)
+
+
+constructor phenomenon:
+-----------------------
+
++	when an object is created, the constructor of that class is called.
+
++	when an object of sub class is created, super class constructor is called first and 
+    	then the sub class constructor is called. This hold true for any levels of inheritance.
+
+	when a sub class object is created with
+
+	i) default constructor		then the super class default constructor is called.
+	ii) parameter constructor	then the super class default constructor is called.
+	iii) copy constructor		then the super class default constructor is called.
+
+
+
+
+[5] 17-Jan-2022
+
+Abstract Polymorphism	(Abstraction)
+---------------------------------------------------------
+abstract means "incomplete or unclear". It is an idea but we don't know how to implement.
+abstraction means "behaviour hiding".
+abstraction is "disclosing only required details and hiding the background implementation".
+
+abstract class:
+--------------------
+	It is a class which should not have objects allocated.
+
+	In this scenario, we never need to create an object for Person.
+        so, Person class can be declared as an abstract.
+
+	to make a class as an abstract, it must be defined with an "abstract" keyword.
+	we cannot instantiate (create an object) an abstract class.
+
+abstract method:
+----------------------
+	It is a method which do not have any implementation (i.e., definition)
+
+   	
+	1) an abstract method must be written only inside an abstract class.
+	2) but an abstract class need not contain any abstract method.
+	3) all sub classes of abstract class, must implement (override) all abstract methods. 
+       	4) if not, the sub class must also be marked as "abstract".
+
+abstract class A {
+    abstract void show();
+}
+
+class B extends A {
+    @Override
+    protected void show() {               
+        System.out.println("B");
+    }
+}
+
+class Test {
+    public static void main(String [] args) {
+        B obj = new B();
+        obj.show();
+    }
+}
+
+error:
+    cannot reduce the visibility of the inherited method.
+
+
+private	► protected ► default ► public
+
+
+
+polymorphism:
+	poly means many
+	morph means forms
+
+	exhibiting different behaviours for a same method call.
+
+	move()	is known as polymorphic.				
+
+	man	►	move()	►	walk
+	fish	►	move()	►	swim
+	bird	►	move()	►	fly
+	snake	►	move()	►	crawl
+
+
+	polymorphism
+	+	compile-time polymorphism	(early binding)
+		eg: method overloading
+
+	+	run-time polymorphism		(late binding)
+		eg: method overriding
+
+note:
+-----
+	we can store object of a sub class in a super class reference variable.
+
+
+
+Type Casting:
+-------------
+	Converting one datatype to another.
+	It is only work on primitive data types.
+
+	2 types.
+
+	a) Broadening	(promotion)		implicit
+	b) Narrowing	(demotion)		explicit
+
+
+	primitive types:
+	-------------------
+	a) broadening:
+	    -----------------
+	int x = 45;
+	double d = x;		(implicit)	- broadening
+
+	double d2 = 67;		// OK
+	int y = '@';		// OK
+
+	char -> int -> double
+
+	a) narrowing: (explicit):
+	------------------------------
+	int x = 45.0;		// error
+	int x = (int)45.0;	// OK
+
+	char ch = (char)156;	// OK
+
+
+Referencing:  (UpCasting and DownCasting):
+------------------------------------------
+       					     Employee
+			                        |
+            	-----------------------------------------------------------------
+	        |					                        |
+              Manager				                	ContractEmployee
+	        |
+       Managing Director
+
+
+eg:
+	Employee emp1 = new Employee();	
+	Employee emp2 = new Manager();
+	Employee emp3 = new ContractEmployee();	
+	Employee emp4 = new ManagingDirector();
+	Manager m2 = new ManagingDirector();	
+
+
+	Manager m3 = new ContractEmployee();			// Not Possible	
+	ContractEmployee ce = new Employee();			// Not Possible
+
+
+
+	user-defined data types:
+	-----------------------------------------
+	ContractEmployee ce2 = emp3;				// Not Possible		
+
+	ContractEmployee ce2 = (ContractEmployee)emp3	
+	
+
+	
+
+
+final keyword:
+------------------
+1) final class : it cannot be inherited.
+2) final method : it cannot be overridden.
+3) final variable : value of which cannot be modified. (constant)
+
+what is the opposite keyword of final?
+
+	???
+
+
+interface:
+----------
++	It is a user-defined datatype but contain only public abstract methods and public static final variables.	(upto JDK 1.7)
++	It is mainly used to achieve multiple inheritance.
++	We can acheive 100% abstraction.
+
++	we cannot create object for an interface.
++	create a sub class (using implements keyword) and override all the abstract methods then create object for the sub class and use it.
+
+
+class		►	extends		►	sub class
+interface	►	implements	►	sub class
+interface	►	extends		►	sub interface
+
+class		►	NOT POSSIBLE 	►	sub interface
+
+eg-1:
+------
+
+interface   B {
+
+}
+
+interface   C {
+
+}
+class	A	implements	B, C {
+
+}
+
+
+eg-2:
+-----
+class	X {
+
+}
+
+interface  Y {
+
+}
+
+class	Z   extends  X   implements  Y {
+
+}
+
+eg-3:
+-----
+interface A {
+
+}
+interface B {
+
+}
+
+interface C   extends  A, B {
+
+}
+
+
+what is the difference between abstract class and interface?
+???
+
+
+	
+
+ 								Built-In Packages
+						                ------------------
+                                        			(Java SE Libraries)
+
+java.lang			(default package - because it is imported for every program)
+	Object          
+	System
+	Math
+	String
+	StringBuffer
+	StringBuilder
+	Exception
+	Throwable interface
+	Runnable interface
+	Thread
+	Wrapper classes - Integer, Double, Float, Long, Boolean
+
+
+java.util
+    Scanner
+    Date        (deprecated)
+    Calendar    (deprecated)
+
+java.io
+    BufferedReader	
+
+
+1) java.lang.System class:
+   -------------------------------
+
+	class variables			              	object
+	-------------------				---------
+	public static java.io.InputStream		in
+	public static java.io.PrintStream		out
+	public static java.io.PrintStream		err
+
+	System.in	carries signal from keyboard to VDU.
+	System.out, System.err carries signal directly to VDU.
+
+
+	methods:
+	------------
+	public static void gc();		request for garbage collection.
+	public static void exit(int)		terminates the program then and there. int could be either a 0 or 1.
+    
+
+
+2) java.lang.Math
+-------------------
+	public static fields:
+	------------------------
+		E, PI
+    	
+	public static methods
+	----------------------------
+		double pow()
+		double sin(angle in radians)
+            	Math.sin(30)    =>  ???
+            	Math.sin(Math.toRadians(30))    =>  0.5
+
+        	double cos(angle in radians)
+		double sqrt()
+
+		ceil() : return next integer
+            	Math.ceil(11.2) => 12
+		floor() : return previous integer
+            	Math.floor(11.9) => 11
+		round() 
+            	Math.round(11.2) =>  11
+            	Math.round(11.9) =>  12
+
+		abs()
+		toRadians()
+		toDegrees()
+
+
+
+Boxing:
+    converting primitive variable into a wrapper object
+
+    int x = 89;
+    Integer iobj = x;   // auto-boxing
+
+unBoxing:
+    converting wrapper object back into primitive variable
+ 
+    Integer iobj = new Integer(109);
+    int x = iobj; 	// auto-unboxing
+
+
+static import: (JDK 1.5)
+------------------------
+    java.lang.Math class provide static methods.
+        sqrt()
+        abs()
+        pow()
+
+    int a, b;
+    double hypotenuse = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
+
+    (or)
+    import static java.lang.Math.sqrt;
+    import static java.lang.Math.pow;
+
+    double hypotenuse = sqrt(pow(a,2) + pow(b,2));
+
+
+    import java.util.Scanner;       // recommended
+    import java.util.*;             // bad coding practice
+
+
+
+	
+
+								Exception Handling
+								------------------
+
+Exception is an object that represents a situation where the application broke down.
+Every Exception is a pre-defined class in Java.
+
+
+
+   		java.lang.Throwable (i)
+                        |
+                        |
+            ---------------------------------
+            |                               |
+            java.lang.Error         java.lang.Exception
+                                            |
+                                            |
+                                    java.lang.RuntimeException
+
+
+
+Exception classes that are derived from java.lang.RuntimeException class - UNCHECKED
+unchecked exceptions are not informed by the compiler.
+
+All other are  								 - CHECKED
+
+
+try, catch, finally
+throw, throws
+
+	
+	1) try : contain the code where the exception can be generated.
+    	2) catch : contain statements that are to be executed when the specified exception occurred in the correspoding try block
+        3) finally : contain the code to be executed whether an exception or occurred or not.  
+
+            the most relevant exception classes mention first.
+            least relevant exception mention next.
+
+    a try block must follow an immediate catch block (or) a finally block.
+
+            try {				try {
+                ..					...
+            } finally {				} catch(ExceptionClassName excep) {
+                ...					...
+            }					}
+
+    a try can have many catch blocks.
+    a try block can have another try block within it.
+
+    
+note:
+-----
++	we are not supposed to handle UnChecked Exceptions
+        we have to avoid these exceptions using a technique called "Defensive programming".
+
+
++	if you do not handle checked exceptions, the compiler will give errors.
++	checked exceptions must be handled, they cannot be avoided.
+
+
+
+User Defined Exceptions:
+------------------------
+1. create a class which should be derived from java.lang.Exception or java.lang.RuntimeException
+2. write a constructor that takes a String parameter.
+3. call the super class constructor by passing this String to it.
+
+
+4. in the app,
+	enclose the problamatic code inside a try block.
+	raise the user defined exception using "throw" keyword.
+	handle the user defined exception in the corresponding catch block.
+
+throw keyword:
+--------------
++	to raise an exception
+
+throws keyword:
+----------------
++	delegating the exception handling responsibility to the caller of the method.
+
+
+JDK 7 Enhancements:
+---------------------------------
+a) multi-catch exception
+
+    try {
+	    statement(s)
+    } catch (Exception-1   |  Exception-2  |  Exception-3    obj) {
+	    statement(s)
+    }
+
+
+b) try-with-resources
+
+    try (declare closable resources here....){
+                    ........................
+    } catch(....){
+
+    }
+
+    the closable resource will be close automatically.
+
+    a Resource has to implement java.lang.Closable or java.lang.AutoClosable interface
+    to be recognized as closable.
+
+
+
+
+ 								Generics
+							        --------
+These are called as ADT	(abstract data types)
+
+when there is a logic which is indepedent of datatypes, then we can use ADT. 
+eg: Sorting on int's, float's, double's or char's are same.
+
+generics are implemented using angular brackes. < >. The imaginary datatype is represented as T. 
+eg: <T>.
+if we have two imaginary datatypes then <T1, T2>
+
+generics do not support primitive types.
+T can be Book, Car, ComplexNumber, Employee etc.,
+but not with int, char, float, double.
+if it is inevitable, we may use Wrapper classes.
+
+1) generic methods
+
+	public void sort(T[] arr) {
+		// logic goes here ...
+	}
+
+
+2) generic classes
+
+class  Test<T> {
+	private:
+		T   data;
+	}
+}
+
+
+
+								Collection API   (java.util)
+								----------------------------
+								(Collection Framework)
+API	►	Application Programming Interface
+
+It is a collection of interfaces, abstract classes.
+Java provided implementation classes also for Collection API.
+
+
+Collections contain following 3 elements:
+a) declarations
+b) implementations
+c) algorithims
+
+
+
+							<< Collection API Diagram >>
+
+List interface
++	allow duplicate items
++	index-based operations are possible
++	nulls are allowed
+
+
+	+	ArrayList class
+		-	is best when traversal is done more
+		-	insertions and deletions are less
+		-	internally use an expandable array
+		-	it is not thread-safe
+
+			add(), remove(), set(), size(), get(), iterator()
+			clear(), isEmpty()
+
+		what is the default capacity of an array list?
+			10
+
+		when we are trying to add 11 the element, the capacity is automatically increased.
+			newCapacity = oldCapacity + (oldCapacity >> 1)
+	
+		capacity is increased by 50%.
+	
+
+	+	LinkedList class
+		-	is best when insertions and deletions are frequently done.
+		-	internally use a double-linked list.
+
+			descendingIterator()
+			
+	
+	+	Vector		(legacy class)
+
+
+
+what is difference between iterator and list iterator?
+
+how do you compare two arraylists whether they are equal or not?
+
+what is the difference between arraylist and vector?
++	vector is a legacy class
++	it is a thread-safe (synchronized)
++	the default capacity for vector is 10.
++	the capacity is increased by 100%.
+
+
+
+Set interface
++	do not allow duplicates
++	no index based operations are possible
+
+
+	+ HashSet class		:	uncertain order
+	+ LinkedHashSet		:	insertion order
+	+ TreeSet		:	sorted order
+
+
+
+java.util.Collections class:
+-------------------------------
+	a) sort(arrayList)
+	b) binarySearch()
+	c) fill()
+
+
+java.lang.Comparable interface:
+---------------------------------
+	Employee class should be inherited from Comparable interface.
+	
+	public int compareTo(Employee o) {
+		// logic goes here ..
+	}
+
+
+java.util.Comparator interface:	
+--------------------------------
+	Without disturbing the Employee class, other programmers can create their own comparators.
+
+
+	public int compare(Employee o1, Employee o2) {
+		// logic goes here ..
+	}
+
+
+what is the difference between Comparable and Comparator?
+---------------------------------------------------------
+
+		Comparable									Comparator
+		----------									----------
+1) Comparable provides a single sorting sequence. In other words, 		The Comparator provides multiple sorting sequences. 
+   we can sort the collection on the basis of a single element 			In other words, we can sort the collection on the basis
+   such as id, name, and price.	 						of multiple elements such as id, name, and price etc.
+
+2) Comparable affects the original class, i.e., the actual class 		Comparator doesn't affect the original class, i.e., the 
+   is modified.	  								actual class is not modified.
+
+3) Comparable provides compareTo() method to sort elements.			Comparator provides compare() method to sort elements.
+
+4) Comparable is present in java.lang package.					A Comparator is present in the java.util package.
+
+5) We can sort the list elements of Comparable type by 				We can sort the list elements of Comparator type by 
+   Collections.sort(List) method.						Collections.sort(List, Comparator) method.
+
+
+
+what is the contract between equals() and hashCode() ?
+
+	when two objects are equal as per equals() method, the hash codes must be same.
+	but the vice versa is not true.
+
+	when ever you override equals() method, make sure that hashCode() is also override.
+
+
+
+
+							IOStreams (java.io)
+							-------------------
+
+
+stream : flow of data.
+
+iostreams are used to store the data permanantly (in the form of files)
+
+two types:
+1) text stream	(character stream)
+	-	to store any kind of information
+
+
+	Reader
+		FileReader
+		BufferedReader
+	Writer
+		FileWriter
+		PrintWriter
+
+2) binary stream (byte stream)
+	-	to store objects, audio, video, image
+
+	InputStream
+		FileInputStream
+		ObjectInputStream
+	OutputStream
+		FileOutputStream
+		ObjectOutputStream
+
+serialization	:	storing (writing) object into a file
+			the class should implement java.io.Serializable interface.
+			Serializable interface is called as a null interface or marker interface (no methods to override)
+
+			writeObject()
+
+de-serialization :	reading object from a file.
+			
+			readObject()
+
+
+
+
+								Object Cloning
+								--------------
+
+The clone() method of java.lang.Object class creates a shallow copy of the object.
+
+Here, the shallow copy means it creates a new object and copy all the fields and methods associated with the object.
+
+The class should be inherited from Cloneable interface.
+we have to override clone() method.
+
+
+
+
+							final, finally and finalize()?
+							------------------------------
+
+	
++	finalize() is the method of Object class. 
++	This method is automatically called just before an object is garbage collected. 
++	finalize() method overrides to dispose system resources, perform clean-up activities and minimize memory leaks.
+
+
+
+
+								Multi Threading
+								----------------
+what is a thread?
++	it is a light weight process.
++	we can have multiple threads in a program using which we can perform multiple tasks parallelly.
+
+how many ways?
++	by extending java.lang.Thread class
++	by implementing java.lang.Runnable interface?
+
+constructors:
++	public Thread()
++	public Thread(Runnable)
+
+
+why two ways?
++	if you want to create a thread on a sub class, we cannot use extends again.
++	here we have to use implements Runnable.
+
+
+class 		A 	
+{
+
+}
+
+
+class		B	extends		A   implements  Runnable {
+
+
+}
+
+
+
+what is a thread life cycle?
+[diagram]
+
+life cycle methods?
++	start()
++	stop()
++	run()		:	it contain statements related to the task
+				it is executed automatically when we call start()
+
+other methods:
+wait()
+notify()
+sleep(milliseconds)
+suspend()
+yield()
+resume()
+
+currentThread()
+setName()
+getName()
+getPriority()
+setPriority()
+getId()
+isAlive()
+setDaemon(boolean)
+
+
+Thread priorities:
+---------------------
+It is an integer between 1 to 10.
+
+1	MIN_PRIORITY
+5	NORM_PRIORITY		(default priority)
+10	MAX_PRIORITY
+
+
+What is Daemon thread?
++	Daemon thread is abruptly terminated when no other threads are running.
++	It cannot run on its own.
+
+setDaemon(true);
+
+
+synchronization?
++	it is the capability to control the access of multiple threads to any shared resource.
+
++	synchronized method
++	synchronized block
+
+
+
+
+							Concurrency API
+							---------------
+						    (java.util.concurrent)
+
+ThreadPool
+ExecutorService:
+	it allow us to create a pool of threads.
+
+	+	newFixedThreadPool(number_of_threads)
+
+
+
+
+							Java 8 Features
+							----------------
+1) DateTimeAPI
+	+	LocalDate
+	+	LocalTime
+	+	LocalDateTime
+	+	Period			(used to find the gap between two dates)
+	+	Duration		(used to find the gap between two time
+	+	DateTimeFormatter
+
+
+
+[6] 18-Jan-2022
+
+
+2) Enhancements in interfaces:
+	+	default method
+	+	static method
+
+
+3) Functional interface:
+	+	When an interface contain only one abstract method, then it is said to a functional interface.
+	+	@FunctionalInterface can be used.
+
+	pre-defined functional interfaces:
+	1) Consumer	:	accept a parameter but do not return any value
+	2) Supplier	:	do not accept any parameter but return any value
+	3) Predicate
+	4) Function
+
+
+
+4) Lamdba interface
+	+	It is meant for functional interface.
+
+5) Stream
+	+	A Stream can be defined as a sequence of elements from a source. 
+	+	The source of elements may be a Collection or Array.
+
+
+	intermediate operations
+	1)	filter()
+	2) 	map()
+
+	terminal operations
+
+
+
+
+	
+
+								SQL
+								---
+							(Structured Query Language)
+RDBMS	(Relational Database Management Systems)
+----------------------------------------------------
+eg:	Oracle, MySQL, Postgre SQL
+	MS SQL Server, SQLite
+
+SQL:
+----
++	it is a non-procedural language
++	it is case insensitive
++	clauses must be written in different lines for readability.
+
+
+
+SQL Commands:
+---------------
++	DDL		(CREATE | ALTER | DROP | TRUNCATE | RENAME)
++	DML		(INSERT | UPDATE | DELETE)
++	DCL		(GRANT | REVOKE)
++	TCL		(COMMIT | ROLLBACK | SAVEPOINT)
++	DQL / DRL	(SELECT)
+
+
+SQL Datatypes:
+--------------
+CHAR, VARCHAR, VARCHAR2, NUMBER, DATE
+LONG, RAW, LONG RAW
+CLOB  (Chacter Large Object), BLOB	(Binary Large Object)
+
+
+What is the difference between Char and Varchar?
++	CHAR	-	fixed length, space padded
+			max. is 2000
+
++	VARCHAR	-	varying length
+			max. is 4000
+
+
+char(10)	►	UMA......	►	10 bytes
+varchar(10)	►	UMA		►	3  bytes
+
+
+What is the difference between varchar and varchar2?
++	they are same.
+
+
+What is normalization?
+----------------------
+It is the process of remove data redundancy and data inconsistency.
+
+
+1 NF	:	no multi-valued columns
+		identify the primary key column
+2 NF	:	functional dependency
+3 NF	:	no transitive dependency
+
+
+
+4 NF
+5 NF
+BCNF
+
+Integrity Constraints:
+----------------------
+These are conditions that are automatically verified by oracle server everytime you insert/update/delete data in a table.
+
++	NOT NULL
++	UNIQUE
++	CHECK (condition)
++	PRIMARY KEY
++	FOREIGN KEY	(REFERENCES)
+
+
++	DEFAULT
+
+
+Primary Key:
++	It is used to identify each row uniquely in a table.
++	cannot be null
++	cannot be duplicated
++	a table can have only one primary key.
+
+
+Foreign Key:
++	to establish relation from child table to parent table.
++	can be null
++	can be duplicated
++	a table can have more than one foreign key
++	every foreign key must be defined as a primary key or a unique key in the parent table.
+
+
+CREATE   TABLE   dept
+(deptno   number(3)   primary key,
+ dname	  varchar2(20)
+);
+
+deptno = 10, dname = sales
+
+INSERT  INTO  dept  VALUES  (10, 'sales');
+INSERT  INTO  dept  VALUES  (20, 'purchase');
+
+
+
+CREATE   TABLE   emp
+(empno   number(3)    primary key,
+ ename   varchar2(20),
+ doj     date,
+ salary  number(7,2)   check (salary >= 10000),
+ deptno  number(3)  references dept(deptno)
+);
+
+empno = 101, ename = ramesh,  doj = 5 january 2022, salary 15000, deptno 10
+
+
+INSERT  INTO  emp   VALUES  (101, 'ramesh', '5-jan-2022' , 15000, 10);
+INSERT  INTO  emp   VALUES  (102, 'harkia', '4-jan-2022' , 17000, 10);
+INSERT  INTO  emp   VALUES  (103, 'sreetu', '3-jan-2022' , 27000, 10);
+INSERT  INTO  emp   VALUES  (104, 'lakshmi', '3-jan-2022' , 24000, 30);
+
+
+UPDATE  emp   SET   salary = 17000  WHERE  empno = 101;
+
+DELETE  FROM  emp   WHERE   empno = 104;
+
+DELETE  FROM  emp   WHERE   doj = '3-jan-2022';
+
+
+
+
+location	v	30
+
+
+ALTER   TABLE   dept  ADD  location   varchar2(30);
+ALTER   TABLE   emp   MODFIY  ename  varchar2(15);
+ALTER   TABLE   emp   ADD  desg  varchar2(15);
+
+ALTER   TABLE   dept  DROP  COLUMN location;
+
+ALTER   TABLE   emp   DROP   (desg, doj);
+
+ALTER   TABLE   emp   DROP  primary key;
+
+
+
+Write a command to add a foreign key to an existing table?
+How do you remove a foreign key?
+How do you assign a check constraint for an existing table?
+
+
+DELETE FROM dept;
+TRUNCATE  TABLE  dept;
+
+what is the difference between DELETE and TRUNCATE?
+???
+
+
+
+SELECT:
+-------
+	to retrieve from a table.
+	we can perform all the following relational algebra operations using SELECT command.
+
+
+relational algebra operations:
+------------------------------
++	projection		(selecting few columns)
++	restriction 		(seleting few rows)
++	product
++	join
++	union
++	intersection
++	difference (minus)
+
+
+syntax:
+-------
+SELECT	columnlist/*
+FROM	tablename;
+
+we can perform the following operations using SELECT command.
++	arithmetic expressions
++	column aliases		(should be enclosed within double quotes)
++	concatenated columns
++	literals		(should be enclosed within single quotes)
+
+
+1) display monthly salary of all employees.
+
+SELECT employee_id, first_name, salary, commission_pct, salary+(salary*commission_pct) 
+FROM employees;
+
+
+what is null?
++	when a column lack it's value then it is said to be null.
++	a null is not same as ZERO.
++	it is either unassigned, undetermined or unpredicted.
++	if any arithmetic operation is performed with null value, it leads to null result.
+
+how to handle null values?
++	using NVL() library function
+
++	syntax:
+		NVL(col/expr, non-null-value)
+
+
+2) SELECT employee_id, first_name, salary, commission_pct, salary+(salary*NVL(commission_pct, 0)) 
+FROM employees;
+
+
+3) SELECT employee_id, first_name, salary, commission_pct, salary+(salary*NVL(commission_pct, 0)) AS "Monthly Salary" 
+FROM employees;
+
+
+4) display the full name of all employees.
+	
+SELECT   employee_id, first_name || last_name AS "Employee Name"
+FROM     employees;
+
+
+5) display the full name of all employees.
+
+SELECT   employee_id, first_name || ' ' || last_name AS "Employee Name", salary+salary*nvl(commission_pct,0) AS "Monthly Salary"
+FROM     employees;
+
+
+WHERE clause:
+--------------
+	to filter the rows based on a criteria.
+
+syntax:
+-------
+SELECT		columnlist/*
+FROM		tablename
+[WHERE		condition;]
+
+
+operators:
+---------
+1) arithmetic operators	:	+	-	*	/
+2) relational operators	:	>	<	=	>=	<=	!=  (or)  <>
+3) logical operators	:	and	or	not
+4) string concatenation opertors:	||
+5) SQL operators
+	a) BETWEEN	value-1  AND  value-2
+	b) IN	(value-1, value-2, ...)
+	c) LIKE	  'character pattern'
+		i) %		replace 0 or more unknown characters
+		ii) _		replace a single unknown character.
+	d) IS  NULL
+6) Negation Opeators
+	a) NOT  BETWEEN	value-1  AND  value-2
+	b) NOT  IN	(value-1, value-2, ...)
+	c) NOT  LIKE	  'character pattern'
+		i) %		replace 0 or more unknown characters
+		ii) _		replace a single unknown character.
+	d) IS  NOT NULL
+	
+
+
+
+6) display all employees who are working in department 50.
+
+SELECT   first_name, department_id 
+FROM   employees
+WHERE  department_id = 50;
+
+7) display all employees who earn salary is more than 15000.
+
+SELECT   first_name, salary
+FROM     employees
+WHERE    salary > 15000;
+
+8) display the details of Peter.
+
+SELECT   employee_id, first_name, salary, commission_pct
+FROM   employees
+WHERE  first_name = 'Peter';
+
+
+9) display all employees who are working in department 50 and earn salary more than 6000.
+
+SELECT  employee_id, first_name, department_id, salary
+FROM    employees
+WHERE   department_id = 50
+AND     salary > 6000;
+
+
+10) display all employees who are either sales managers or earn salary less than 10000.
+
+SELECT  employee_id, first_name, salary, job_id
+FROM    employees
+WHERE   job_id = 'SA_MAN' 
+OR      salary < 10000;
+
+
+11) display all employees except sales representatives.
+
+SELECT  employee_id, first_name, job_id
+FROM    employees
+WHERE   job_id <> 'SA_REP';
+
+(or)
+
+...
+...
+...
+
+
+12) display all employees who were hired on or before 15 nov 2004.
+
+SELECT  employee_id, first_name, hire_date
+FROM  employees
+WHERE  hire_date <= '15-nov-2004';
+
+
+13) display all employees who are working in department id 50 and who joined in the year 2005.
+
+SELECT  employee_id, first_name, department_id, hire_date
+FROM    employees
+WHERE   department_id = 50
+AND     hire_date >= '01-jan-2005' 
+AND     hire_date <= '31-dec-2005';
+
+(or)
+
+
+SELECT  employee_id, first_name, department_id, hire_date
+FROM    employees
+WHERE   department_id = 50
+AND     hire_date BETWEEN  '01-jan-2005'  AND  '31-dec-2005';
+
+
+
+
+
+
+15) display all employees who are working department 10, 50, 70 and 90.
+
+SELECT  employee_id, first_name, department_id
+FROM    employees
+WHERE   department_id IN  (10,50,70,90);
+
+
+(or)
+
+.....
+
+16) display all employees whose first name begin with alphabet 'S'.
+
+SELECT   employee_id, first_name
+FROM     employees
+WHERE    first_name like 'S%';
+
+
+17) display all employees whose first name end with alphabet 'n'.
+
+SELECT   employee_id, first_name
+FROM     employees
+WHERE    first_name like '%n';
+
+18) display all employees whose first name contain alphabet 'n'.
+
+SELECT   employee_id, first_name
+FROM     employees
+WHERE    first_name like '%n%';
+
+
+19) display all employees whose first name contain second character as alphabet 'o'.
+
+
+SELECT   employee_id, first_name
+FROM     employees
+WHERE    first_name like '_o%';
+
+
+20) display all employees who were hired in the month of April in any year.
+
+SELECT   employee_id, first_name, hire_date
+FROM     employees
+WHERE    hire_date like '%APR%';
+
+
+
+
+21) display all employees who do not earn any commission.
+
+SELECT  employee_id, first_name, commission_pct
+FROM    employees
+WHERE   commission_pct is null;
+
+
+distinct qualifier:
+-------------------
+to eliminate duplicate rows in the output of the select command.
+
+22) SELECT   distinct job_id
+FROM     employees;
+
+23) SELECT   distinct department_id
+FROM     employees;
+
+24) SELECT   distinct department_id, job_id
+FROM     employees;
+
+
+ORDER BY clause:
+----------------
+the order of retrieval of rows from the select command is always uncertain.
+order by clause is used to retrieve in the ascending, descending, alphabetical or chronological order.
+if used, it must be the last clause in the select command.
+
+
+SELECT   columnlist/*
+FROM     tablename
+[WHERE   condition]
+[ORDER   BY   col-1 [ ASC / DESC ]  [, col-2 [ASC / DESC], .... ] ];
+
+25) display all employees in the increasing order of their salary.
+
+SELECT  employee_id, first_name, salary
+FROM    employees
+ORDER   BY  salary  ASC;
+
+26) display all employees as per their senioriy.
+
+SELECT  employee_id, first_name, hire_date
+FROM    employees
+ORDER   BY  hire_date;
+
+
+27) display all employees in the ascending order of department then by salary.
+
+SELECT   employee_id, first_name, department_id, salary
+FROM     employees
+ORDER    BY   department_id, salary;
+
+
+
+							Library Functions
+
+
+1) number functions
+2) character functions
+3) date functions
+4) conversion functions
+5) group functions	(aggregate functions)
+
+
+1) number functions:
+	a) abs(col/val)
+	b) power(col/val, col/val)
+	c) sqrt(col/val)
+	d) sin(col/val)
+	e) cos(col/val)
+	f) ceil(col/val)	: return next integer
+	g) floor(col/val)	: return previous integer
+	h) round(col/val)
+	i) trunc(col/val)
+DUAL:
+-----
+	it is a dummy table in oracle that contain only one row.
+	
+28)	select  abs(-25) from dual;
+29)	select  power(5,3)  from dual;
+30)	select ceil(11.89), floor(11.89), round(11.89567,2) from dual;
+
+2) character functions
+	a) length(col/val)
+	b) upper(col/val)
+	c) lower(col/val)
+	d) initcap(col/val)
+	e) instr(col/val, search_string)	: return the index of search_string in the col/val
+	f) substr()
+
+
+3) date functions
+
+	sysdate : sydate is a pseudo column that return system date. internally it contain time also.
+
+31)	select  sysdate  from dual;
+	
+
+	date arithmetic:
+		date + n	= date
+		date - n	= date
+		date2 - date1	= n
+
+32) 	display the hire date and probation date of all employees.
+	the probation date is 180 days from their hire date.
+
+
+	SELECT  employee_id, first_name, hire_date, hire_date+180 AS "Probation Date"
+	FROM    employees;
+
+
+33)	display the service of every employees.
+
+	SELECT  employee_id, first_name, hire_date, trunc((sysdate - hire_date)/365) AS "Service in Years"
+	FROM    employees;
+
+
+	a) ADD_MONTHS(date, n)
+	b) MONTHS_BETWEEN(date-1, date-2)
+
+34) 	SELECT  employee_id, first_name, hire_date, trunc(months_between(sysdate, hire_date)/12) AS "Service in Years"
+	FROM    employees;
+
+	c) LAST_DAY(date)
+	d) NEXT_DAY(date, 'weekdayname')
+
+35)	SELECT  next_day(sysdate, 'friday')
+	FROM    dual;	 
+
+
+
+4) conversion functions:
+
+	a) TO_CHAR(date, 'date picture')
+
+	date pictures			description
+		DD				
+		MM
+		YY
+		YYYY
+
+		MON
+		MONTH
+
+		DDD			julian day
+		DAY			week day name
+
+		hh
+		mi
+		ss
+
+		am / pm			
+
+
+		
+36)	SELECT  TO_CHAR(sysdate, 'dd month yyyy') 
+	FROM    dual;
+
+37)	SELECT  employee_id, first_name, to_char(hire_date, 'dd-month-yy')
+	FROM    employees;
+
+38)	SELECT  to_char(sysdate, 'ddd')
+	FROM    dual;
+
+39)	SELECT  to_char(sysdate, 'day')
+	FROM    dual;
+
+
+40)	SELECT  to_char(sysdate, 'hh:mi:ss am')
+	FROM    dual;
+
+41)  	SELECT employee_id, first_name, to_char(hire_date, 'dd-month-yyyy hh:mi:ss am') 
+	FROM   employees;
+
+
+	b) TO_CHAR(number, 'number picture')
+
+42)	SELECT  employee_id, first_name, salary, to_char(salary, '$99,999.99')
+	FROM    employees;
+
+
+
+[8] 8-jan-2022
+
+group functions (aggregate functions):
+
++	sum(col/val)
++	avg(col/val)
++	min(col/val)
++	max(col/val)
++	count(col/val)
+
+42) SELECT sum(salary), avg(salary), min(salary), max(salary)
+    FROM   employees;
+
+43) SELECT count(*)
+    FROM   employees;
+
+44) SELECT count(employee_id)
+    FROM   employees;
+
+45) SELECT count(salary), COUNT(commission_pct)
+    FROM   employees;
+
+
+
+GROUP BY clause:
++	It is used to divide the rows into groups and can extract summary information for each group.
+
+syntax:
+-------
+SELECT	columnlist/*
+FROM	tablename
+[WHERE  condition]
+[GROUP  BY  col-1 [ , col-2, col-3, ..] ]
+[ORDER   BY   col-1 [ ASC / DESC ]  [, col-2 [ASC / DESC], .... ] ];
+
+
+46) display total salary given to each department. 
+
+SELECT   department_id, sum(salary)
+FROM     employees
+GROUP    BY   department_id
+ORDER    BY   department_id;
+
+47) display average salary of each designation.
+
+SELECT   job_id, avg(salary)
+FROM     employees
+GROUP    BY   job_id;
+
+48) display number of employees in each department.
+
+SELECT   department_id, count(*)
+FROM     employees
+GROUP    BY   department_id;
+
+
+
+HAVING clause:
+--------------
++	this clause is used to filter the rows after grouping.
++	it is used always in conjunction with GROUP BY clause.
+
+syntax:
+------
+SELECT	columnlist/*
+FROM	tablename
+[WHERE  condition]
+[GROUP  BY  col-1 [ , col-2, col-3, ..] ]
+[HAVING condition]
+[ORDER   BY   col-1 [ ASC / DESC ]  [, col-2 [ASC / DESC], .... ] ];
+
+
+
+49) display number of employees in each department if the department contain atleast 5 employees.
+
+SELECT  department_id, count(*)
+FROM    employees
+GROUP   BY   department_id
+HAVING  count(*) >= 5;
+
+
+what is the difference between WHERE and HAVING?
++	WHERE clause used to filter the rows before grouping and
+	HAVING clause used to filter the rows after grouping.
+
+
+50) display total salary of each designation for all departments whose department id is more than 50.
+
+
+SELECT  job_id, sum(salary)
+FROM    employees
+WHERE   department_id > 50
+GROUP   BY  job_id
+ORDER   BY  job_id;
+
+
+51) groups within groups
+
+display total salary of each job within each department.
+
+
+main group	►	department id
+sub group	►	job id
+
+SELECT   department_id, job_id, sum(salary)
+FROM     employees
+GROUP    BY  department_id, job_id
+ORDER    BY  department_id, job_id;
+
+
+
+							JOINS
+							-----
+used to retrieve data from multiple related tables.
+both the tables should have a common column.
+
+types of joins:
+1) equi join		(if the join condition is on equality)
+2) non-equi join	(otherwise)
+
+
+1) inner join		
+2) outerjoin
+
+
+SELECT   col-1, col-2, ...
+FROM     table-1
+NATURAL JOIN     table-2;
+
+the natural join operation get data by comparing all common column(s) between two tables.
+
+
+SELECT   col-1, col-2, ...
+FROM     table-1
+JOIN     table-2
+USING    (common-column-name);
+
+the USING clause specify the common column that should be used for comparing tables.
+
+SELECT   col-1, col-2, ...
+FROM     table-1
+JOIN     table-2
+ON       (join condition);
+
+
+
+52) display employee id, first name and department name.
+
+SELECT    employee_id, first_name, department_name
+FROM      employees
+JOIN      departments
+USING     (department_id);
+
+(or)
+
+SELECT    employee_id, first_name, department_name
+FROM      employees
+JOIN      departments
+ON        (employees.department_id = departments.department_id);
+
+(or)
+
+SELECT    employee_id, first_name, department_name
+FROM      employees  E
+JOIN      departments  D
+ON        (E.department_id = D.department_id);
+
+E and D are table aliases.
+
+
+
+Three-Way Joins:
+-----------------
+
+53) display employee id, first name, department name and job title.
+
+SELECT   employee_id, first_name, department_name, job_title
+FROM     employees
+JOIN     departments
+USING    (department_id)
+JOIN     jobs
+USING    (job_id);
+
+(or)
+
+
+....
+
+
+
+Four-Way joins:
+------------------
+
+54) display employee id, first name, department name, job title, city
+
+SELECT  employee_id, first_name, department_name, job_title, city
+FROM    employees
+JOIN    departments
+USING   (department_id)
+JOIN    jobs
+USING   (job_id)
+JOIN    locations
+USING   (location_id);
+
+
+INNER  JOIN  : 
+	will give only matching rows.
+	
+
+
+OUTER JOIN:
+	it will display all matching rows as well any unmatched rows.
+
+a) LEFT OUTER JOIN
+b) RIGHT OUTER JOIN
+c) FULL OUTER JOIN
+
+
+55) 
+
+SELECT  employee_id, first_name, department_name
+FROM    employees
+LEFT OUTER JOIN  departments
+USING   (department_id);
+
+
+56) 
+
+SELECT  employee_id, first_name, department_id, department_name
+FROM    employees
+RIGHT OUTER JOIN  departments
+USING   (department_id);
+
+
+57) 
+
+SELECT  employee_id, first_name, department_id, department_name
+FROM    employees
+FULL  OUTER JOIN  departments
+USING   (department_id);
+
+
+SELF  JOIN:
+	joining a table to itself.
+
+
+
+58) display the employee id, first name and his/her manager name.
+
+SELECT  E.employee_id, E.first_name "employee name", M.first_name AS "manager name"
+FROM    employees  E
+JOIN    employees  M
+ON      (E.manager_id = M.employee_id);
+
+
+
+
+							SUB QUERY
+							---------
++	it is also called as inner query or inner select or sub select.
++	the sub query is executed first then the result is passed to the outer query. outer query is executed that.
+
+
+59) display the employee name who earn maximum salary.
+
+SELECT  employee_id, first_name, salary
+FROM  employees
+WHERE salary = (SELECT max(salary)
+FROM   employees);
+
+
+60) display all employees who is having the same job as Neena.
+
+SELECT  employee_id, first_name, job_title
+FROM    employees
+JOIN    jobs
+USING   (job_id)
+WHERE   job_id = (SELECT  job_id
+FROM    employees
+WHERE   first_name = 'Neena');
+
+					
+
+							CORRELATED SUB QUERY
+							--------------------
++	this type of query is executed as many times as the number of rows in the outer query.
++	it will take one row from the outer query and go to the inner query and qualify the outer query for matching.
+	if a match is found, the row is displayed otherwise it is ignored.
++	the above process is happened for each row in the outer query.
+
++	if the inner query contain a column that belongs to outer query in it's join condition then it is identified as 
+	correlated sub query.
+
+
+61) display all employees who earn more than the average salary in their department.
+
+SELECT  employee_id, first_name, salary, department_id
+FROM    employees E
+WHERE   salary > (SELECT  avg(salary)
+                  FROM    employees M
+                  WHERE   M.department_id = E.department_id);
+
+                  
+								VIEWS
+								-----
++	It is a virtual table, through which we can retrieve data from an underlying table known as 
+	base table.
++	a view never contain any data on it's own.
++	it is stored as SELECT stament only.
+
++	it is mainly for security.
++	it is also used to reduce the repetetive typing of complex sql commands.
+
+
+62) CREATE  OR REPLACE  VIEW   empid_first_name_view
+AS
+SELECT  employee_id, first_name
+FROM    employees;
+
+
+SELECT * FROM empid_first_name_view;
+
+
+63) CREATE VIEW employee_details_view
+AS
+SELECT   employee_id, first_name, department_name, job_title, city, country_name
+FROM     employees
+JOIN     departments
+USING    (department_id)
+JOIN     jobs
+USING    (job_id)
+JOIN     locations
+USING    (location_id)
+JOIN     countries
+USING    (country_id);
+
+
+SELECT   * FROM  employee_details_view;
+
+
+						SET OPERATIONS
+						--------------
+to combine two queries.
+
+
+UNION
+UNION ALL
+INTERSECT
+MINUS
+
+
+64) SELECT  salary  FROM   employees   WHERE   department_id = 50
+MINUS
+SELECT  salary  FROM   employees   WHERE   department_id = 80;
+
+
+
+						INDEX
+						-----
+
+it is meant for faster searching.
+for every primary key column, a unique index is generated automatically by the oracle server.
+this index is used whenever we perform querying on primary key.
+
+
+65) CREATE  INDEX    department_id_index
+ON   employees(department_id);
+
+
+select * from employees where department_id > 50;
+
+
+[9] 10-jan-2022
+
+
+Top-N Analysis:
+---------------
+66) find the second highest salary.
+67) display top 3 earners.
+68) display top 3 senior employees.
+69) display all employees who do not have any subordinates.
+    (or)
+    display all employees who are not managers.
+
+       SELECT e.employee_id, e.first_name
+       FROM employees e
+       LEFT JOIN employees sub
+       ON e.employee_id = sub.manager_id
+       WHERE sub.manager_id IS NULL;
+
+       (or)
+
+       SELECT e.employee_id, e.first_name
+       FROM employees e
+       WHERE NOT EXISTS (SELECT 1
+                         FROM employees e2
+                         WHERE e2.manager_id = e.employee_id);
+
+
+
+								PL/SQL
+								------
++	PL/SQL stands for procedural language of SQL
+
++	we write PL/SQL blocks.
+	+	anonymous block		(unnamed block)
+	+	named block		(stored sub programs)
+
++	PL/SQL executor is responsible for executing PL statements.
++	SQL executor is responsible for executing SQL Commands.
++	PL/SQL block contain both SQL commands and PL constructs.
+
+
+PL/SQL architecture:
+[diagram]
+
+
+PL/SQL datatypes:
+-----------------
++	char, varchar, varchar2, number, date, boolean
+
+
+declaring variables:
+--------------------
+	variable_name    :   datatype   [ :=   expr ];
+
+
+anonymous block:
+---------------
+[DECLARE
+	variable declarations]
+BEGIN
+	statement(s)
+[EXCEPTION
+     	WHEN   exception-id    THEN
+		statement(s);]
+END;
+
+
+program-1:
+-----------
+declare
+    first_number   number(3);
+    second_number  number(3);
+    result         number(3);
+
+begin
+    first_number := 10;
+    second_number := 20;
+    result := first_number + second_number;
+
+    dbms_output.put_line('Sum = ' || result);
+end;
+/
+
+
+
+SELECT statement in PL/SQL:
+-----------------------------
+SELECT   columnlist/*
+INTO     var-1, var-2, ...
+FROM     tablename
+[WHERE   condition]
+[GROUP   BY  col-1  [, col-2 ...] ]
+[HAVING  condition]
+[ORDER   BY  col-1  [ASC/DESC]  [, col-2 [ASC/DESC], ... ];
+
+
+Note:
+-----
++	select statement that return more number of rows cause an exception to be raised.	(TOO_MANY_ROWS)
++	select statenent that return no row cause an exception to be raised.			(NO_DATA_FOUND)
+
+
+
+INTO phrase:
+------------
+It is a madatory phrase, used to store the data retrieved from the database in pl/sql variables.
+
+
+
+program-2:
+----------
+
+write a pl/sql block to display the details of an employee whose id is 173.
+
+declare
+   v_employee_id   number(4);
+   v_first_name    varchar2(10);
+   v_salary        number(5);
+begin
+   SELECT   employee_id, first_name, salary
+   INTO     v_employee_id, v_first_name, v_salary
+   FROM     employees
+   WHERE    employee_id = 173;
+
+   dbms_output.put_line('Employee Id = ' || v_employee_id);
+   dbms_output.put_line('First Name  = ' || v_first_name);
+   dbms_output.put_line('Salary      = ' || v_salary);
+end;
+/
+
+
+program-3:
+----------
+write a pl/sql block to display the details of an employee whose id is 501.
+
+
+declare
+   v_employee_id   number(4);
+   v_first_name    varchar2(10);
+   v_salary        number(5);
+begin
+   SELECT   employee_id, first_name, salary
+   INTO     v_employee_id, v_first_name, v_salary
+   FROM     employees
+   WHERE    employee_id = 501;
+
+   dbms_output.put_line('Employee Id = ' || v_employee_id);
+   dbms_output.put_line('First Name  = ' || v_first_name);
+   dbms_output.put_line('Salary      = ' || v_salary);
+exception
+   when  no_data_found  then
+      dbms_output.put_line('No employee present with this id');
+end;
+/
+
+
+program-4:
+---------
+write a program to display all sales managers.
+
+
+declare
+   v_employee_id   number(4);
+   v_first_name    varchar2(10);
+   v_job_id        varchar2(10);
+   v_salary        number(5);
+begin
+   SELECT   employee_id, first_name, job_id, salary
+   INTO     v_employee_id, v_first_name, v_job_id, v_salary
+   FROM     employees
+   WHERE    job_id = 'SA_MAN';
+
+   dbms_output.put_line('Employee Id = ' || v_employee_id);
+   dbms_output.put_line('First Name  = ' || v_first_name);
+   dbms_output.put_line('Job Id = ' || v_job_id);
+   dbms_output.put_line('Salary      = ' || v_salary);
+exception
+   when  no_data_found  then
+      dbms_output.put_line('No employee present with this job id');
+   when  too_many_rows  then
+      dbms_output.put_line('More employees are there with this job id');
+end;
+/
+
+
+cursor:
+-------
++	it is a private sql area (special memory in the server) that hold all the rows retreved by the oracle server as
+	the result of select statement from pl/sql block.
+
+steps:
++	declare a cursor	(no memory is allocated, rather the query is parsed)
++	open the cursor		(associated sql command is executed, memory is allocated)
++	fetch one row at a time from the cursor and store the data in the pl/sql variables
++	do the above step until all rows are processed.
++	finally, close the cursor.
+
+
+pl/sql attributes:
+------------------
+
+%type		to assign datatype of a column to pl/sql variable
+%rowtype	to assign the entire record type
+
+
+cursor attributes:
+-----------------
+%notfound	
+%found
+%isopen
+
+
+
+program-5:
+---------
+write a program to display all sales managers.
+
+
+declare
+   v_employee_id   employees.employee_id%type;
+   v_first_name    employees.first_name%type;
+   v_job_id        employees.job_id%type;
+   v_salary        employees.salary%type;
+
+   CURSOR   cur_sales_manager
+   IS
+   SELECT   employee_id, first_name, job_id, salary
+   FROM     employees
+   WHERE    job_id = 'SA_MAN';
+
+
+begin
+   OPEN    cur_sales_manager;
+
+   LOOP
+      FETCH  cur_sales_manager  INTO  v_employee_id, v_first_name, v_job_id, v_salary;
+      EXIT  WHEN  cur_sales_manager%NOTFOUND;
+
+      dbms_output.put_line('Employee Id = ' || v_employee_id);
+      dbms_output.put_line('First Name  = ' || v_first_name);
+      dbms_output.put_line('Job Id = ' || v_job_id);
+      dbms_output.put_line('Salary      = ' || v_salary);
+   END LOOP;
+
+   CLOSE   cur_sales_manager;
+ 
+exception
+   when  no_data_found  then
+      dbms_output.put_line('No employee present with this job id');
+
+end;
+/
+
+
+CURSOR FOR LOOP:
+----------------
++	no need to open the cursor
++	no need to close the cursor
++	no need to fetch the data.
++	no need of declaring pl/sql variables to store the cursor data.
+
+
+program-6:
+---------
+write a program to display all sales managers.
+
+
+declare
+
+   CURSOR   cur_sales_manager
+   IS
+   SELECT   employee_id, first_name, job_id, salary
+   FROM     employees
+   WHERE    job_id = 'SA_MAN';
+
+begin
+
+   FOR current_row  IN  cur_sales_manager
+   LOOP
+      dbms_output.put_line('Employee Id = ' || current_row.employee_id);
+      dbms_output.put_line('First Name  = ' || current_row.first_name);
+      dbms_output.put_line('Job Id = ' || current_row.job_id);
+      dbms_output.put_line('Salary      = ' || current_row.salary);
+   END LOOP;
+
+exception
+   when  no_data_found  then
+      dbms_output.put_line('No employee present with this job id');
+
+end;
+/
+
+
+
+PARAMETERIC CURSOR:
+-------------------
++	no need to declare the cursor
++	no need to open the cursor
++	no need to close the cursor
++	no need to fetch the data.
++	no need of declaring pl/sql variables to store the cursor data.
+
+
+program-6:
+---------
+write a program to display all sales managers.
+
+
+begin
+
+   FOR current_row  IN  ( SELECT   employee_id, first_name, job_id, salary
+                          FROM     employees
+                          WHERE    job_id = 'SA_MAN')
+   LOOP
+      dbms_output.put_line('Employee Id = ' || current_row.employee_id);
+      dbms_output.put_line('First Name  = ' || current_row.first_name);
+      dbms_output.put_line('Job Id = ' || current_row.job_id);
+      dbms_output.put_line('Salary      = ' || current_row.salary);
+   END LOOP;
+
+exception
+   when  no_data_found  then
+      dbms_output.put_line('No employee present with this job id');
+
+end;
+/
+
+
+stored sub programs:
+	because these programs are stored in the database, they are called so.
+
+	there are two types.
+
+	a) stored procedure	(accept parameters but cannot return any value)
+	b) stored function	(accept parameters but should return any value).
+
+
+program-7:
+-----------
+write a stored procedure that will increase salary of all employees by given percentage.
+
+
+CREATE  OR   REPLACE  PROCEDURE   proc_raise_salary(p_percentage   number)
+IS
+BEGIN
+    update employees2
+    set salary = salary + salary*p_percentage/100;
+END;
+/
+
+
+execute proc_raise_salary;
+
+
+program-8:
+----------
+write a stored function to return the average salary of a given department_id.
+
+CREATE  OR  REPLACE  FUNCTION  fun_get_avg_salary(p_department_id  number)
+RETURN  number
+IS
+    v_avg_salary   number(7,2);
+
+BEGIN
+    SELECT  avg(salary)
+    INTO    v_avg_salary
+    FROM    employees
+    WHERE   department_id = p_department_id;
+ 
+    RETURN  v_avg_salary;
+END;
+/
+
+
+SELECT   fun_get_avg_salary(50)  from dual;
+
+
+PACKAGE:
+--------
+	collection of related stored procedures and functions.
+
+	every package will have two components.
+	a) package specification (package declaration)
+	b) package body
+
+
+
+
+
+								ANT / Maven 
+								-----------
+
+It is a build tool.
+It will create a .jar/.war file (Distributable file).
+
+It can download all the third-party libraries. (dependencies).
+
+xml 		
++	stands for extensible markup language
++	it is a data format that can used across different o/s
++	it is mainly used to store configuration data.
+
+
+pom.xml	
++	pom stands "project object model"
++	it contain all dependencies, plug-ins and project related properties.
+
+
+
+maven central repository	
++	this repo contain all the important required for java developers.
++	the dependencies are copied from central repo to local repo (it is named as ".m2" folder)
+
+
+
+
+								JDBC
+							(Java Database Connectivity)
+
+							      (java.sql)
+
+Java APP	►	JDBC API	►	JDBC Driver Manager	►	JDBC Driver
+
+
+JDBC API is implemented by DB Vendors like Oracle, MySQL etc.,
+
+Oracle JDBC Driver	►	It is a collection of implementation classes of JDBC API (oracle implementation)
+MySQL JDBC Driver	►	It is a collection of implementation classes of JDBC API (mysql community implementation)
+
+These JDBC Drivers are available in the form of ".jar" files.
+
+
+
+
+JDBC Drivers are 4 types.
+1) Type-1 Driver	(JDBC-ODBC Bridge Driver)	-	It was not supported any more 
+2) Type-2 Driver	
+3) Type-3 Driver	
+4) Type-4 Driver	(Thin Driver)
+
+
+steps:
+------
+1) load the driver class	(this step is optional from jdk1.8)
+2) establish connection
+3) execute sql commands
+4) finally close the connection.
+
+
+JDBC API:
+---------
++	DriverManager is absrtact class
+	+	getConnection()
+
++	Connection interface
+	+	Statement createStatement()
+	+	PreparedStatement prepareStatement(sql)
+	+	CallableStatement prepareCall(sql)
+	
++	Statement interface	
+	+	execute(sql)
+	+	executeUpdate(sql)	: to execute INSERT/UPDATE/DELETE/CREATE
+	+	executeQuery(sql)	: to execute SELECT
+
+
++	PreparedStatement interface
+	+	it supports parameterized queries.
+
+	+	execute()
+	+	executeUpdate()		: to execute INSERT/UPDATE/DELETE/CREATE
+	+	executeQuery()		: to execute SELECT
+	
+
++	CallableStatement interface
+	+	to call stored procedures / stored functions
+
+
++	ResultSet interface
+	+	used to hold the data that is returned from the database as a result of executing SELECT command.
+
+
+what is the difference between Statement and PreparedStatement?
+
+		Statement									PreparedStatement
+----------------------------------------------------------------------------------------------------------------------------------------------
+1) It is used when SQL query is to be executed only once.			It is used when SQL query is to be executed multiple times.
+
+2) You can not pass parameters at runtime.					You can pass parameters at runtime. (parameterized query)
+
+3) Performance is very low.							Performance is better because it uses pre-compiled queries.
+
+4) we can execute multiple sql commands using a single				we can execute only one sql command using a single 
+   Statement object.								PreparedStatement object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

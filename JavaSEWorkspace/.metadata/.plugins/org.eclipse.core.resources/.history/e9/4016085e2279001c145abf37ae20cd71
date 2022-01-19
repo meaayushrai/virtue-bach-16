@@ -1,0 +1,22 @@
+package com.virtue.ui;
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+		String str = "JaVa";
+		str.toUpperCase();
+		System.out.println(str);
+		str.toLowerCase();
+		System.out.println(str);
+		
+		String str2 = "srinivas";
+		String str3 = "srinivas";
+		System.out.println(str2 == str3);
+
+	}
+
+}
+
+
+
+

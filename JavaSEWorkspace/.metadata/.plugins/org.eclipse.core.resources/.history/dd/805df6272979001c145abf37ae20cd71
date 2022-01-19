@@ -1,0 +1,8 @@
+package com.virtue.ui;
+
+public class ComplexNumber {
+	int realPart;
+	int imaginaryPart;
+	
+	
+}

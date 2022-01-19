@@ -1,0 +1,14 @@
+package com.virtue.ui;
+
+public class MainMethods {
+
+	public static void main(String[] args) {
+		System.out.println("in main method ...");
+
+	}
+	
+	void main(int num) {
+		System.out.println(num);
+	}
+
+}
