@@ -895,9 +895,9 @@ abstract class:
 	we cannot instantiate (create an object) an abstract class.
 
 
-[3] 
 
 
+[3] 21-jan-2022
 
 abstract method:
 ----------------------
@@ -940,12 +940,14 @@ polymorphism:
 
 	exhibiting different behaviours for a same method call.
 
-	move()	is known as polymorphic.				
+	
 
 	man	►	move()	►	walk
 	fish	►	move()	►	swim
 	bird	►	move()	►	fly
 	snake	►	move()	►	crawl
+
+	move()	is known as polymorphic method.	
 
 
 	polymorphism
@@ -986,8 +988,8 @@ Type Casting:
 
 	a) narrowing: (explicit):
 	------------------------------
-	int x = 45.0;		// error
-	int x = (int)45.0;	// OK
+	int x = 45.1;		// error
+	int x = (int)45.1;	// OK
 
 	char ch = (char)156;	// OK
 
@@ -1005,7 +1007,7 @@ Referencing:  (UpCasting and DownCasting):
 
 eg:
 	Employee emp1 = new Employee();	
-	Employee emp2 = new Manager();
+	Employee emp2 = new Manager();		
 	Employee emp3 = new ContractEmployee();	
 	Employee emp4 = new ManagingDirector();
 	Manager m2 = new ManagingDirector();	
@@ -1024,8 +1026,6 @@ eg:
 	
 
 	
-
-
 final keyword:
 ------------------
 1) final class : it cannot be inherited.
@@ -1078,7 +1078,8 @@ interface  Y {
 
 }
 
-class	Z   extends  X   implements  Y {
+
+class    Z   extends  X   implements   Y {
 
 }
 
@@ -1107,6 +1108,7 @@ what is the difference between abstract class and interface?
                                         			(Java SE Libraries)
 
 java.lang			(default package - because it is imported for every program)
+	Wrapper classes - Integer, Double, Float, Long, Boolean
 	Object          
 	System
 	Math
@@ -1117,13 +1119,13 @@ java.lang			(default package - because it is imported for every program)
 	Throwable interface
 	Runnable interface
 	Thread
-	Wrapper classes - Integer, Double, Float, Long, Boolean
-
-
+	
 java.util
     Scanner
     Date        (deprecated)
     Calendar    (deprecated)
+    Collection API
+
 
 java.io
     BufferedReader	
@@ -1180,13 +1182,13 @@ java.io
 
 
 Boxing:
-    converting primitive variable into a wrapper object
+    converting primitive variable into a corresponding wrapper object
 
     int x = 89;
     Integer iobj = x;   // auto-boxing
 
 unBoxing:
-    converting wrapper object back into primitive variable
+    converting wrapper object back into corresponding primitive variable
  
     Integer iobj = new Integer(109);
     int x = iobj; 	// auto-unboxing
@@ -1211,15 +1213,14 @@ static import: (JDK 1.5)
 
     import java.util.Scanner;       // recommended
     import java.util.*;             // bad coding practice
-
-
+	
 
 	
 
 								Exception Handling
 								------------------
 
-Exception is an object that represents a situation where the application broke down.
+Exception is an object that represents a situation where the application is terminated.
 Every Exception is a pre-defined class in Java.
 
 
@@ -1248,8 +1249,7 @@ throw, throws
 	
 	1) try : contain the code where the exception can be generated.
     	2) catch : contain statements that are to be executed when the specified exception occurred in the correspoding try block
-        3) finally : contain the code to be executed whether an exception or occurred or not.  
-
+        3) finally : contain the code to be executed whether an exception occurred or not.  
             the most relevant exception classes mention first.
             least relevant exception mention next.
 
@@ -1266,7 +1266,7 @@ throw, throws
 
     
 note:
------
+----- 
 +	we are not supposed to handle UnChecked Exceptions
         we have to avoid these exceptions using a technique called "Defensive programming".
 
@@ -1321,6 +1321,9 @@ b) try-with-resources
     a Resource has to implement java.lang.Closable or java.lang.AutoClosable interface
     to be recognized as closable.
 
+
+
+[4]
 
 
 
